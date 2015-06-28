@@ -1,0 +1,409 @@
+<?xml version="1.0" ?>
+<library  version="2.0" name="sap.ui.demokit">
+  <module name="sap/ui/demokit/CodeSampleContainer.js" size="6229" compressedSize="3248">
+    <description>Provides control sap.ui.demokit.CodeSampleContainer.</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+      <module name="sap/ui/core/Control.js"/>
+      <module name="sap/ui/core/ResizeHandler.js"/>
+      <module name="sap/ui/demokit/library.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/CodeSampleContainerRenderer.js" size="1629" compressedSize="727">
+    <description>Provides default renderer for control sap.ui.demokit.CodeSampleContainer</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/CodeViewer.js" size="5529" compressedSize="2339">
+    <description>Provides control sap.ui.demokit.CodeViewer.</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+      <module name="sap/ui/commons/Button.js"/>
+      <module name="sap/ui/commons/Dialog.js"/>
+      <module name="sap/ui/core/Control.js"/>
+      <module name="sap/ui/demokit/library.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/CodeViewerRenderer.js" size="1529" compressedSize="586">
+    <description>Provides default renderer for control sap.ui.demokit.CodeViewer</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/DemokitApp.js" size="24892" compressedSize="13136">
+    <description>Main class for Demokit-like applications</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+      <module name="sap/ui/commons/DropdownBox.js"/>
+      <module name="sap/ui/commons/Label.js"/>
+      <module name="sap/ui/commons/Splitter.js"/>
+      <module name="sap/ui/commons/layout/AbsoluteLayout.js"/>
+      <module name="sap/ui/core/ListItem.js"/>
+      <module name="sap/ui/core/search/OpenSearchProvider.js"/>
+      <module name="sap/ui/demokit/Tag.js"/>
+      <module name="sap/ui/demokit/TagCloud.js"/>
+      <module name="sap/ui/demokit/library.js"/>
+      <module name="sap/ui/ux3/NavigationItem.js"/>
+      <module name="sap/ui/ux3/Shell.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/EntityInfo.js" size="8173" compressedSize="4261">
+    <description>Provides reuse functionality for reading documentation from metamodel entities</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+      <module name="sap/ui/demokit/util/jsanalyzer/ModuleAnalyzer.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/FileUploadIntrospector.js" size="3389" compressedSize="1444">
+    <description>Provides control sap.ui.demokit.FileUploadIntrospector.</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+      <module name="sap/ui/core/Control.js"/>
+      <module name="sap/ui/demokit/library.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/FileUploadIntrospectorRenderer.js" size="2992" compressedSize="1686">
+    <description>Provides default renderer for control sap.ui.demokit.FileUploadIntrospector</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/HexagonButton.js" size="2833" compressedSize="1128">
+    <description>Provides control sap.ui.demokit.HexagonButton.</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+      <module name="sap/ui/core/Control.js"/>
+      <module name="sap/ui/demokit/library.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/HexagonButtonGroup.js" size="1490" compressedSize="563">
+    <description>Provides control sap.ui.demokit.HexagonButtonGroup.</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+      <module name="sap/ui/core/Control.js"/>
+      <module name="sap/ui/demokit/library.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/HexagonButtonGroupRenderer.js" size="1621" compressedSize="564">
+    <description>Provides default renderer for control sap.ui.demokit.HexagonButtonGroup</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/HexagonButtonRenderer.js" size="1800" compressedSize="823">
+    <description>Provides default renderer for control sap.ui.demokit.HexagonButton</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/IndexLayout.js" size="9911" compressedSize="5455">
+    <description>Provides control sap.ui.demokit.IndexLayout.</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+      <module name="sap/ui/Device.js"/>
+      <module name="sap/ui/core/Control.js"/>
+      <module name="sap/ui/core/IntervalTrigger.js"/>
+      <module name="sap/ui/demokit/library.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/IndexLayoutPage.js" size="3782" compressedSize="2390">
+    <description>Creates Index Page within the Demokit</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+      <module name="sap/ui/core/IconPool.js"/>
+      <module name="sap/ui/demokit/IndexLayout.js"/>
+      <module name="sap/ui/model/json/JSONModel.js"/>
+      <module name="jquery.sap.encoder.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/IndexLayoutRenderer.js" size="1318" compressedSize="622">
+    <description>Provides default renderer for control sap.ui.demokit.IndexLayout</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/IndexPage.js" size="2769" compressedSize="1757">
+    <description>Provides a pseudo control for index pages within the Demokit</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+      <module name="sap/ui/demokit/DemokitApp.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/Tag.js" size="1433" compressedSize="570">
+    <description>Provides control sap.ui.demokit.Tag.</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+      <module name="sap/ui/core/Element.js"/>
+      <module name="sap/ui/demokit/library.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/TagCloud.js" size="2008" compressedSize="749">
+    <description>Provides control sap.ui.demokit.TagCloud.</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+      <module name="sap/ui/core/Control.js"/>
+      <module name="sap/ui/demokit/library.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/TagCloudRenderer.js" size="2189" compressedSize="974">
+    <description>Provides default renderer for control sap.ui.demokit.TagCloud</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/UI5EntityCueCard.js" size="7446" compressedSize="3075">
+    <description>Provides control sap.ui.demokit.UI5EntityCueCard.</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+      <module name="sap/ui/commons/Link.js"/>
+      <module name="sap/ui/core/Control.js"/>
+      <module name="sap/ui/demokit/EntityInfo.js"/>
+      <module name="sap/ui/demokit/library.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/UI5EntityCueCardRenderer.js" size="7678" compressedSize="4637">
+    <description>Provides default renderer for control sap.ui.demokit.UI5EntityCueCard</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/UIAreaSubstitute.js" size="1390" compressedSize="544">
+    <description>Provides control sap.ui.demokit.UIAreaSubstitute.</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+      <module name="sap/ui/core/Element.js"/>
+      <module name="sap/ui/demokit/library.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/explored/Bootstrap.js" size="7523" compressedSize="4483">
+    <description>Bootstrap for the 'explored' app.</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/explored/Component.js" size="4275" compressedSize="2735">
+    <description>Root component for the 'explored' app.</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+      <module name="sap/ui/demokit/explored/util/MyRouter.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/explored/i18n/messageBundle.properties" size="574">
+  </module>
+  <module name="sap/ui/demokit/explored/util/MyRouter.js" size="1050" compressedSize="516">
+    <description>Provides acustomized router class for the 'explored' app.</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+      <module name="sap/ui/core/routing/Router.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/explored/util/ObjectSearch.js" size="497" compressedSize="272">
+    <description>Provides a simple search feature</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/explored/util/ToggleFullScreenHandler.js" size="1477" compressedSize="988">
+    <description>Provides a simple search feature</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/explored/view/app.controller.js" size="1087" compressedSize="858" raw="true">
+  </module>
+  <module name="sap/ui/demokit/explored/view/app.view.js" size="458" compressedSize="294" raw="true">
+  </module>
+  <module name="sap/ui/demokit/explored/view/appSettingsDialog.fragment.xml" size="1253">
+    <requires>
+      <module name="sap/ui/core/Fragment.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/explored/view/code.controller.js" size="5307" compressedSize="3269" raw="true">
+  </module>
+  <module name="sap/ui/demokit/explored/view/code.view.xml" size="926">
+    <requires>
+      <module name="sap/ui/core/mvc/XMLView.js"/>
+      <module name="sap/ui/demokit/explored/view/code.controller.js"/>
+      <module name="sap/ui/core/HTML.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/explored/view/entity.controller.js" size="15412" compressedSize="9211">
+    <requires>
+      <module name="sap/ui/demokit/EntityInfo.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/explored/view/entity.view.xml" size="11165">
+    <requires>
+      <module name="sap/ui/core/mvc/XMLView.js"/>
+      <module name="sap/ui/demokit/explored/view/entity.controller.js"/>
+      <module name="sap/ui/core/CustomData.js"/>
+      <module name="sap/ui/layout/VerticalLayout.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/explored/view/master.controller.js" size="13371" compressedSize="7691">
+    <requires>
+      <module name="jquery.sap.storage.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/explored/view/master.view.xml" size="1392">
+    <requires>
+      <module name="sap/ui/core/mvc/XMLView.js"/>
+      <module name="sap/ui/demokit/explored/view/master.controller.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/explored/view/notFound.controller.js" size="918" compressedSize="778" raw="true">
+  </module>
+  <module name="sap/ui/demokit/explored/view/notFound.view.xml" size="425">
+    <requires>
+      <module name="sap/ui/core/mvc/XMLView.js"/>
+      <module name="sap/ui/demokit/explored/view/notFound.controller.js"/>
+      <module name="sap/ui/core/HTML.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/explored/view/sample.controller.js" size="3836" compressedSize="2490" raw="true">
+  </module>
+  <module name="sap/ui/demokit/explored/view/sample.view.xml" size="648">
+    <requires>
+      <module name="sap/ui/core/mvc/XMLView.js"/>
+      <module name="sap/ui/demokit/explored/view/sample.controller.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/explored/view/titles.view.html" size="1941">
+  </module>
+  <module name="sap/ui/demokit/explored/view/viewSettingsDialog.fragment.xml" size="2250">
+    <requires>
+      <module name="sap/ui/core/Fragment.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/explored/view/welcome.view.xml" size="303">
+    <requires>
+      <module name="sap/ui/core/mvc/XMLView.js"/>
+      <module name="sap/ui/core/mvc/HTMLView.js"/>
+      <module name="sap/ui/demokit/explored/view/titles.view.html"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/icex/Component.js" size="2711" compressedSize="1579">
+    <description>! @copyright@</description>
+    <requires>
+      <module name="sap/ui/core/UIComponent.js"/>
+      <module name="sap/ui/demokit/icex/model/FavoriteModel.js"/>
+      <module name="sap/ui/demokit/icex/util/Sorter.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/icex/model/Config.js" size="396" compressedSize="218">
+    <description>! @copyright@</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/icex/model/FavoriteModel.js" size="1742" compressedSize="1055">
+    <description>! @copyright@</description>
+    <requires>
+      <module name="jquery.sap.storage.js"/>
+      <module name="sap/ui/demokit/icex/util/Sorter.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/icex/util/Sorter.js" size="420" compressedSize="296">
+    <description>! @copyright@</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/icex/view/App.controller.js" size="3624" compressedSize="2225">
+    <requires>
+      <module name="jquery.sap.history.js"/>
+      <module name="sap/m/InstanceManager.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/icex/view/App.view.js" size="944" compressedSize="723" raw="true">
+  </module>
+  <module name="sap/ui/demokit/icex/view/Detail.controller.js" size="1864" compressedSize="1284">
+    <requires>
+      <module name="sap/ui/core/IconPool.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/icex/view/Detail.view.xml" size="3503">
+    <requires>
+      <module name="sap/ui/core/mvc/XMLView.js"/>
+      <module name="sap/ui/demokit/icex/view/Detail.controller.js"/>
+      <module name="sap/ui/core/Icon.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/icex/view/Favorite.controller.js" size="1976" compressedSize="1332" raw="true">
+  </module>
+  <module name="sap/ui/demokit/icex/view/Favorite.view.xml" size="1234">
+    <requires>
+      <module name="sap/ui/core/mvc/XMLView.js"/>
+      <module name="sap/ui/demokit/icex/view/Favorite.controller.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/icex/view/Group.controller.js" size="1656" compressedSize="1219">
+    <requires>
+      <module name="sap/ui/demokit/icex/model/Config.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/icex/view/Group.view.xml" size="983">
+    <requires>
+      <module name="sap/ui/core/mvc/XMLView.js"/>
+      <module name="sap/ui/demokit/icex/view/Group.controller.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/icex/view/Master.controller.js" size="2099" compressedSize="1437">
+    <requires>
+      <module name="sap/ui/demokit/icex/model/Config.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/icex/view/Master.view.xml" size="1713">
+    <requires>
+      <module name="sap/ui/core/mvc/XMLView.js"/>
+      <module name="sap/ui/demokit/icex/view/Master.controller.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/icex/view/Welcome.view.xml" size="2010">
+    <requires>
+      <module name="sap/ui/core/mvc/XMLView.js"/>
+      <module name="sap/ui/core/Icon.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/library.js" size="7865" compressedSize="3917">
+    <description>Initialization Code and shared classes of library sap.ui.demokit.</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+      <module name="sap/ui/demokit/js/highlight-query-terms.js"/>
+      <module name="sap/ui/core/library.js"/>
+      <module name="sap/ui/commons/library.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/util/jsanalyzer/ASTUtils.js" size="5853" compressedSize="2566">
+    <description>Provides implementation of sap.ui.demokit.util.jsanalyzer.ASTUtils</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+      <module name="sap/ui/demokit/js/esprima.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/util/jsanalyzer/Doclet.js" size="2547" compressedSize="1239">
+    <description>Provides implementation of sap.ui.demokit.util.jsanalyzer.Doclet</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/demokit/util/jsanalyzer/ModuleAnalyzer.js" size="15977" compressedSize="7825">
+    <description>Provides implementation of sap.ui.demokit.util.jsanalyzer.EntityParser</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+      <module name="sap/ui/base/ManagedObjectMetadata.js"/>
+      <module name="sap/ui/demokit/util/jsanalyzer/ASTUtils.js"/>
+      <module name="sap/ui/demokit/util/jsanalyzer/Doclet.js"/>
+      <module name="sap/ui/demokit/js/esprima.js"/>
+    </requires>
+  </module>
+</library>

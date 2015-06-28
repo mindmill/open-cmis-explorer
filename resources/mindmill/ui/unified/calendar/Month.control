@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<control xmlns="http://www.sap.com/sap.ui.library.xsd">
+    <name>calendar/Month</name>
+    <derived/>
+    <documentation>renders a month with ItemNavigation
+This is used inside the calendar. Not for stand alone usage
+If used inside the calendar the properties and aggregation are directly taken from the parent
+(To not duplicate and sync DateRanges and so on...)</documentation>
+    <since>1.28.0</since>
+    <baseType>sap.ui.core/Control</baseType>
+    <properties>
+        <property group="Misc" type="sap.ui.core/object" name="date">
+            <documentation>the month including this date is rendered and this date is initial focused (if no other focus set)</documentation>
+        </property>
+        <property group="Misc" defaultValue="false" type="sap.ui.core/boolean" name="intervalSelection">
+            <documentation>If set, interval selection is allowed</documentation>
+        </property>
+        <property group="Misc" defaultValue="true" type="sap.ui.core/boolean" name="singleSelection">
+            <documentation>If set, only a single date or interval, if intervalSelection is enabled, can be selected</documentation>
+        </property>
+        <property group="Misc" defaultValue="false" type="sap.ui.core/boolean" name="showHeader">
+            <documentation>If set, a header with the month name is shown</documentation>
+        </property>
+    </properties>
+    <events>
+        <event allowPreventDefault="false" name="select">
+            <documentation>Date selection changed</documentation>
+        </event>
+        <event allowPreventDefault="false" name="focus">
+            <documentation>Date focus changed</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/object" name="date">
+                    <documentation>focused date</documentation>
+                </parameter>
+                <parameter type="sap.ui.core/boolean" name="otherMonth">
+                    <documentation>focused date is in an other month that the displayed one</documentation>
+                </parameter>
+            </parameters>
+        </event>
+    </events>
+    <aggregations>
+        <aggregation cardinality="0..n" type="sap.ui.unified/DateRange" name="selectedDates">
+            <documentation>Date Ranges for selected dates of the DatePicker</documentation>
+        </aggregation>
+        <aggregation cardinality="0..n" type="sap.ui.unified/DateTypeRange" name="specialDates">
+            <documentation>Date Range with type to visualize special days in the Calendar.
+If one day is assigned to more than one Type, only the first one will be used.</documentation>
+        </aggregation>
+    </aggregations>
+    <associations>
+        <association cardinality="0..n" type="sap.ui.core/Control" name="ariaLabelledBy">
+            <documentation>Association to controls / ids which label this control (see WAI-ARIA attribute aria-labelledby).</documentation>
+        </association>
+    </associations>
+    <methods>
+        <method type="sap.ui.unified/calendar/Month" name="displayDate">
+            <documentation>displays the month of a given date without setting the focus</documentation>
+            <parameters>
+                <parameter type="sap.ui.core/object" name="date">
+                    <documentation>JavaScript date object for focused date.</documentation>
+                </parameter>
+            </parameters>
+        </method>
+    </methods>
+</control>

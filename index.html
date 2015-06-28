@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html><head>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <title>MindMill openCMIS Client</title>
+
+    <script id='sap-ui-bootstrap'
+        src="resources/sap-ui-core.js"
+        data-sap-ui-theme='sap_bluecrystal'
+        data-sap-ui-libs='sap.ui.commons,sap.ui.ux3,sap.ui.table,sap.ui.demokit'></script>
+
+        <!-- CMIS Library -->
+      	<script src="resources/mindmill/cmis.js"></script>
+
+        <link rel="stylesheet" href="http://code.jquery.com/qunit/qunit-1.15.0.css">
+        <link rel="stylesheet" href="css/prettyprint.css">
+
+<script>
+
+
+
+
+	  /***************************************************
+        CMIS Explorer Panel
+      ***************************************************/
+      var oPanelCMIS = new sap.ui.commons.Panel().setText('CMIS Browser');
+      oPanelCMIS.placeAt("uiArea");
+
+      //create a horizontal Splitter
+      var oSplitterV = new sap.ui.commons.Splitter("splitterV");
+      oSplitterV.setSplitterOrientation(sap.ui.commons.Orientation.vertical);
+      oSplitterV.setSplitterPosition("20%");
+      oSplitterV.setMinSizeFirstPane("20%");
+      oSplitterV.setMinSizeSecondPane("30%");
+      oSplitterV.setWidth("100%");
+      oSplitterV.setHeight("100%");
+
+      //adding Labels to both panes
+      //var oLabel1 = new sap.ui.commons.Label({text: "Directory"});
+      //oSplitterV.addFirstPaneContent(oLabel1);
+      //var oLabel2 = new sap.ui.commons.Label({text: "Second Pane"});
+      //oSplitterV.addSecondPaneContent(oLabel2);
+
+      oPanelCMIS.addContent(oSplitterV);
+
+
+      /********  LEFT PANEL                   ***************/
+      //create the Tree control
+      var oTree = new sap.ui.commons.Tree("tree", {select:onNodeSelect});
+
+
+      oTree.setShowHeader(false);
+      oTree.setTitle("MindMill CMIS Explorer");
+      oTree.setWidth("100%");
+      oTree.setHeight("800px");
+      oTree.setShowHeaderIcons(true);
+      oTree.setShowHorizontalScrollbar(true);
+
+      //create Tree Nodes
+
+      var filePath = "/user/admin";
+      var pathSuffix;
+      var imageLocation = "https://sapui5.hana.ondemand.com/sdk/test-resources/sap/ui/commons/demokit/";
+      var oNode1 = new sap.ui.commons.TreeNode("node1", {text:"CMIS Cluster", icon:imageLocation + "images/system.gif", expanded: true});
+      var oNode2 = new sap.ui.commons.TreeNode("node2", {text:"CMIS" + filePath, icon:imageLocation + "images/disk.gif", expanded: true, isSelected: true});
+      //var oNode3 = new sap.ui.commons.TreeNode("node3", {text:"Program Files", icon:imageLocation + "images/folder.gif"});
+      //var oNode4 = new sap.ui.commons.TreeNode("node4", {text:"Windows", icon: imageLocation + "images/folder.gif"});
+
+      jQuery.sap.require("sap.ui.core.IconPool");
+      //var aNames = sap.ui.core.IconPool.getIconNames();
+
+      fileIcon = new sap.ui.core.Icon( {
+    	  src : "sap-icon://document-text"
+      });
+
+
+      var nodesJSON= {};
+      var currentNode ={};
+
+      //Default path and directory
+      currentNode.path = '/user';
+      currentNode.dirname = 'admin';
+      currentNode.parentNode = '';
+      nodesJSON['node2'] = currentNode ;
+
+
+      oNode1.addNode(oNode2);
+
+      //add Tree Node root to the Tree
+      oTree.addNode(oNode1);
+
+      //oTree.placeAt("uiArea");
+      oSplitterV.addFirstPaneContent(oTree);
+
+
+      var directoryListing = {};
+
+
+      function onNodesAdd (currentNode){
+
+    	  files = [{"file":"aaa"},{"file":"bbb"},{"file":"bbb"}];
+    	  files = directoryListing.body.FileStatuses.FileStatus;
+
+    		for(var row in files) {
+    			if (files[row].type === "DIRECTORY") {
+	    			var newNodeId = currentNode.getId() + "_"+ row
+
+	    			var newNode = {};
+
+	    			newNode.path = nodesJSON[currentNode.getId()].path + "/" + nodesJSON[currentNode.getId()].dirname;
+	    			newNode.dirname = files[row].pathSuffix; //.file;
+	    			newNode.parentNode = currentNode.getId();
+	    		  nodesJSON[newNodeId] = newNode ;
+
+	    			var varNode = new sap.ui.commons.TreeNode(newNodeId, {text:files[row].pathSuffix, icon: imageLocation + "images/folder.gif", expanded: true});
+
+
+	    			currentNode.addNode(varNode);
+
+    			}
+    		}
+
+      }
+
+      /********  RIGHT PANEL                   ***************/
+
+        var oModelCMIS = new sap.ui.model.json.JSONModel();
+
+
+        oTableCMIS = new sap.ui.table.Table("CMISDirectoy",{tableId: "CMISDir",
+                   //visibleRowCount: 15,
+                   //firstVisibleRow: 3,
+                   visibleRowCountMode: sap.ui.table.VisibleRowCountMode.Auto,
+                   rowSelectionChange: onRowSelect,
+                   selectionMode: sap.ui.table.SelectionMode.Single,
+                   selectionBehavior: sap.ui.table.SelectionBehavior.Row,
+               	   extension: [
+               	 		new sap.ui.commons.Button({text: "Download", press: downloadSelected })
+               	 	]
+                    });
+
+
+        oTableCMIS.setModel(oModelCMIS);
+
+
+
+      	//Table Column Definitions
+       fileIcon.bindProperty("src", {
+  			path : "type",
+  			//type : ofloatTwoDecimal,  //conflicts with fomratter
+  			formatter: function(cellValue) {
+                  // do formatting here...
+  				switch(cellValue) {
+  				    case "DIRECTORY":
+  				    	cellValue = "sap-icon://folder-full"; //folder-blank
+  				        break;
+  				    default:
+  				    	cellValue = "sap-icon://document-text";
+  				}
+                  return cellValue;
+             }
+  	   });
+       colGby = new sap.ui.table.Column({label: new sap.ui.commons.Label({text:"Type"}),
+                                           template: fileIcon, //new sap.ui.commons.TextView().bindProperty("text","type"),
+                                           width: "10%",
+                                        sortProperty: "type",
+                                        filterProperty: "type"
+                                               });
+       oTableCMIS.addColumn(colGby);
+
+
+        var colGby = new sap.ui.table.Column({label: new sap.ui.commons.Label({text:"Name"}),
+                                         template: new sap.ui.commons.TextView().bindProperty("text","pathSuffix"),
+                                         width: "45%",
+                                      sortProperty: "pathSuffix",
+                                      filterProperty: "pathSuffix"
+                                             });
+         oTableCMIS.addColumn(colGby);
+
+    	 // Float Format 2 decimals
+    	 var ofloatTwoDecimal = new sap.ui.model.type.Float({
+    		minFractionDigits : 3,
+    		maxFractionDigits : 3
+    	 }, {
+    		maximum : 80
+    	 });
+    	 var oControl = new sap.ui.commons.TextView().bindProperty("text", {
+    			path : "length",
+    			//type : ofloatTwoDecimal,  //conflicts with fomratter
+    			formatter: function(cellValue) {
+                    // do formatting here...
+
+                    //NOT easy to refer to other columns
+                    // but could do sub JSON http://scn.sap.com/thread/3180215
+                    // Better to do in JSON source prior
+
+                    if (cellValue == "") {
+                    	return "";
+                    }
+                    cellValue = Number(cellValue);
+                    if ( cellValue > 0) {
+                    	cellValue = cellValue / 1024 ;
+                    }
+
+                    //else return cellValue;
+                    var num = 5.56789;
+                    var n = num.toFixed(2);
+
+                    return Number(cellValue).toFixed(3);
+               }
+    		});
+
+
+
+	    oControl.setTextAlign("End");
+
+     colGby = new sap.ui.table.Column({label: new sap.ui.commons.Label({text:"Size Kb"}),
+                                         template: oControl,
+                                         width: "10%",
+                                         sortProperty: "length",
+                                         filterProperty: "length",
+
+                                    	  //hAlign: sap.ui.commons.layout.HAlign.End,
+                                             });
+     oTableCMIS.addColumn(colGby);
+
+
+     colGby = new sap.ui.table.Column({label: new sap.ui.commons.Label({text:"Date modified"}),
+                                         template: new sap.ui.commons.TextView().bindProperty("text","modificationTime",function(cellValue) {
+                                             // do formatting here...
+                                             return new Date(cellValue);
+                                        }),
+                                         width: "35%",
+                                      sortProperty: "modificationTime",
+                                      filterProperty: "modificationTime"
+                                             });
+      oTableCMIS.addColumn(colGby);
+
+
+		  //Initially sort the table
+      var sortCMIS = new sap.ui.model.Sorter("pathSuffix");
+    	oTableCMIS.bindRows("/body/FileStatuses/FileStatus",sortCMIS);   //  /body/Row/0
+      oTableCMIS.sort("pathSuffix");
+      oTableCMIS.setEditable(false);
+
+       //Add Layout to CMIS Panel
+       //oPanelCMIS.addContent(oTableCMIS);
+       oSplitterV.addSecondPaneContent(oTableCMIS);
+
+
+
+       /******** Initialise dataset                   ***************/
+       onDirList(currentNode.path + "/"  + currentNode.dirname, oNode2);
+
+ 	   /***************************************************
+       ON Download Select
+       ***************************************************/
+       //function() { alert("Button pressed!"); }
+ 	   function downloadSelected (){
+
+ 		     var downloadFile = "webCMIS.xsjs?path=" + filePath + "/" + pathSuffix + "&op=OPEN";
+
+	       var data;
+	       	jQuery.ajax({
+                		    url: downloadFile,
+                		    method: 'GET',
+                		    async: true, // Switch off ASync
+                		    success: function(collection) {getData(collection);} ,
+                		    error: function(xhr, textStatus, errorThrown) {return;} });
+
+	       	function getData(collection) {
+	      	  data = collection.body;
+
+
+  	      	var downloadLink = document.createElement("a");
+  	      	downloadLink.href = "data:application/octet-stream;content-disposition:attachment;filename=file.txt," + escape(collection); //"webCMIS.xsjs?path=/user/admin/archivesmall.csv&op=OPEN";
+  	      	downloadLink.download = pathSuffix; //"archivesmall.csv";
+
+  	      	document.body.appendChild(downloadLink);
+  	      	downloadLink.click();
+  	      	document.body.removeChild(downloadLink);
+
+	      	  return collection;
+	       }
+
+
+ 	   }
+
+	  /***************************************************
+      ON NODE Select
+    ***************************************************/
+		function onNodeSelect (oEvent){
+		    var vNode = oEvent.getParameter("node");
+
+		    //var Col1 = oContext.getProperty("nodeContext");
+
+		    var vPath = nodesJSON[vNode.getId()].path + "/" + nodesJSON[vNode.getId()].dirname  ;
+
+		    onDirList(vPath, vNode);
+
+		    filePath = vPath;
+		 }
+
+		/***************************************************
+        ON ROW SELECT
+      ***************************************************/
+ 		function onRowSelect (oEvent){
+ 		    var oContext = oEvent.getParameter("rowContext");
+ 		    pathSuffix = oContext.getProperty("pathSuffix");
+
+
+		 }
+	  /***************************************************
+      ON DIRECTORY LISTING
+    ***************************************************/
+		function onDirList (path, node){
+
+         var session;
+         session = cmis.createSession($("input[name='serverUrl']").val());
+         session.setCredentials($("input[name='username']").val(), $("input[name='password']").val()).loadRepositories({
+           request : {
+             success : function(data) {
+               library.displayResult("CMIS Connexion", data);
+               ok(true, "Successful connexion!");
+               start();
+               testSuite();
+             },
+             error : function(e) {
+               if (e.responseJSON)
+                 ok(false, "Error during the request: " + e.responseJSON.message);
+               else
+                 ok(false, "Error during the request: " + e.statusText);
+               start();
+             }
+           }
+         });
+    }
+
+    /*
+		     jQuery.ajax({
+				      url: "webCMIS.xsjs?path=" + path ,
+				      method: 'GET',
+				      dataType: 'json',
+				      //data: path,
+				      async: false, // Switch of ASync
+				      //success: appendDirectory, //(data, textStatus, jqXHR),
+				      success: function(collection) {
+				    	  appendDirectory(collection, node);
+				        },
+				      error: function(xhr, textStatus, errorThrown) {return;} });
+		 }
+
+       function appendDirectory(collection,node) {
+    	  directoryListing = collection;
+    	  onNodesAdd (node);
+    	  oModelCMIS.setData(collection);
+
+
+       }
+    */
+
+</script>
+
+
+
+</head>
+<body class='sapUiBody'>
+  <div id="params">
+    <h1>Configuration</h1>
+    <table>
+      <tr>
+        <td class="param-key">Server URL:</td>
+        <td class="param-value"><input type="text" name="serverUrl"
+          autocomplete="off"
+          value="http://schlagmich.net:8080/browser"></input></td>
+      </tr>
+        <td class="param-key">Username:</td>
+        <td class="param-value"><input type="text" name="username"
+          value="test" autocomplete="off"></input></td>
+      </tr>
+      <tr>
+        <td class="param-key">Password:</td>
+        <td class="param-value"><input type="password" name="password"
+          value="test123" autocomplete="off"></input></td>
+      </tr>
+      <tr>
+        <td class="param-key">Test File:</td>
+        <td class="param-value"><input type="file" name="file"></input></td>
+      </tr>
+      <tr>
+      <tr>
+        <td><input type="button" id="start" value="Connect"
+          autocomplete="off" /></td>
+      </tr>
+    </table>
+  </div>
+    <div id="uiArea"></div>
+
+</body>
+</html>

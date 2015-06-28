@@ -1,0 +1,86 @@
+{
+	"name": "sdk",
+	"version": "1.28.5",
+	"buildTimestamp": "",
+	"scmRevision": "",
+	"gav": "com.sap.openui5.dist:sdk:1.28.5:war",
+	"libraries": [
+		{
+			"name": "sap.ui.core",
+			"version": "1.28.5",
+			"buildTimestamp": "201504271209",
+			"scmRevision": "68c17683baf6816023c6b80e3ff7fba23f819ba9",
+			"gav": "com.sap.ui5:core:1.28.5:jar"
+		},
+		{
+			"name": "sap.m",
+			"version": "1.28.5",
+			"buildTimestamp": "201504271209",
+			"scmRevision": "68c17683baf6816023c6b80e3ff7fba23f819ba9",
+			"gav": "com.sap.ui5:mobile:1.28.5:jar"
+		},
+		{
+			"name": "sap.ui.commons",
+			"version": "1.28.5",
+			"buildTimestamp": "201504271209",
+			"scmRevision": "68c17683baf6816023c6b80e3ff7fba23f819ba9",
+			"gav": "com.sap.ui5:commons:1.28.5:jar"
+		},
+		{
+			"name": "sap.ui.demokit",
+			"version": "1.28.5",
+			"buildTimestamp": "201504271209",
+			"scmRevision": "68c17683baf6816023c6b80e3ff7fba23f819ba9",
+			"gav": "com.sap.ui5:demokit-uilib:1.28.5:jar"
+		},
+		{
+			"name": "sap.ui.layout",
+			"version": "1.28.5",
+			"buildTimestamp": "201504271209",
+			"scmRevision": "68c17683baf6816023c6b80e3ff7fba23f819ba9",
+			"gav": "com.sap.ui5:layout:1.28.5:jar"
+		},
+		{
+			"name": "sap.ui.suite",
+			"version": "1.28.5",
+			"buildTimestamp": "201504271209",
+			"scmRevision": "68c17683baf6816023c6b80e3ff7fba23f819ba9",
+			"gav": "com.sap.ui5:suite:1.28.5:jar"
+		},
+		{
+			"name": "sap.ui.table",
+			"version": "1.28.5",
+			"buildTimestamp": "201504271209",
+			"scmRevision": "68c17683baf6816023c6b80e3ff7fba23f819ba9",
+			"gav": "com.sap.ui5:table:1.28.5:jar"
+		},
+		{
+			"name": "sap.ui.unified",
+			"version": "1.28.5",
+			"buildTimestamp": "201504271209",
+			"scmRevision": "68c17683baf6816023c6b80e3ff7fba23f819ba9",
+			"gav": "com.sap.ui5:unified:1.28.5:jar"
+		},
+		{
+			"name": "sap.ui.ux3",
+			"version": "1.28.5",
+			"buildTimestamp": "201504271209",
+			"scmRevision": "68c17683baf6816023c6b80e3ff7fba23f819ba9",
+			"gav": "com.sap.ui5:ux3:1.28.5:jar"
+		},
+		{
+			"name": "themelib_sap_bluecrystal",
+			"version": "1.28.5",
+			"buildTimestamp": "201504271209",
+			"scmRevision": "68c17683baf6816023c6b80e3ff7fba23f819ba9",
+			"gav": "com.sap.ui5:themelib_sap_bluecrystal:1.28.5:jar"
+		},
+		{
+			"name": "themelib_sap_goldreflection",
+			"version": "1.28.5",
+			"buildTimestamp": "201504271209",
+			"scmRevision": "68c17683baf6816023c6b80e3ff7fba23f819ba9",
+			"gav": "com.sap.ui5:themelib_sap_goldreflection:1.28.5:jar"
+		}
+	]
+}

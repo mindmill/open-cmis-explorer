@@ -1,0 +1,9 @@
+host = "zz.zzz.zzz.zzz
+description = "HADOOP HDFS Name Node 50001 -> 50070";
+useSSL = false;
+pathPrefix = "/webhdfs/v1";
+authType = none;
+useProxy = true;
+proxyHost = "proxy-trial";
+proxyPort = 8080;
+timeout = 0;

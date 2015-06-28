@@ -1,0 +1,25 @@
+<mvc:View
+	controllerName="sap.ui.demokit.explored.view.sample"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<Page
+		id="page"
+		showNavButton="{/showNavButton}"
+		navButtonPress="onNavBack" >
+		<headerContent>
+			<Button
+				icon="sap-icon://full-screen"
+				class="sapUiHideOnPhone"
+				tooltip="{i18n>sampleFullScreenTooltip}"
+				press="onToggleFullScreen" />
+			<Button
+				icon="sap-icon://syntax"
+				tooltip="{i18n>sampleShowCodeTooltip}"
+				press="onNavToCode" />
+			<Button visible="{/showNewTab}"
+					tooltip="{i18n>sampleNewTabTooltip}"
+					icon="sap-icon://inspect"
+					press="onNewTab" />
+		</headerContent>
+	</Page>
+</mvc:View>

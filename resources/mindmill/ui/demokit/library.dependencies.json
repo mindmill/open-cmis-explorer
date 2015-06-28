@@ -1,0 +1,465 @@
+{
+  "modules" : [
+    {
+      "name" : "sap/ui/demokit/CodeSampleContainer.js",
+      "description" : "Provides control sap.ui.demokit.CodeSampleContainer.",
+      "size" : 6229,
+      "compressedSize" : 3248,
+      "required" : ["jquery.sap.global.js", "sap/ui/core/Control.js", "sap/ui/core/ResizeHandler.js", "sap/ui/demokit/library.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/CodeSampleContainerRenderer.js",
+      "description" : "Provides default renderer for control sap.ui.demokit.CodeSampleContainer",
+      "size" : 1629,
+      "compressedSize" : 727,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/CodeViewer.js",
+      "description" : "Provides control sap.ui.demokit.CodeViewer.",
+      "size" : 5529,
+      "compressedSize" : 2339,
+      "required" : ["jquery.sap.global.js", "sap/ui/commons/Button.js", "sap/ui/commons/Dialog.js", "sap/ui/core/Control.js", "sap/ui/demokit/library.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/CodeViewerRenderer.js",
+      "description" : "Provides default renderer for control sap.ui.demokit.CodeViewer",
+      "size" : 1529,
+      "compressedSize" : 586,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/DemokitApp.js",
+      "description" : "Main class for Demokit-like applications",
+      "size" : 24892,
+      "compressedSize" : 13136,
+      "required" : ["jquery.sap.global.js", "sap/ui/commons/DropdownBox.js", "sap/ui/commons/Label.js", "sap/ui/commons/Splitter.js", "sap/ui/commons/layout/AbsoluteLayout.js", "sap/ui/core/ListItem.js", "sap/ui/core/search/OpenSearchProvider.js", "sap/ui/demokit/Tag.js", "sap/ui/demokit/TagCloud.js", "sap/ui/demokit/library.js", "sap/ui/ux3/NavigationItem.js", "sap/ui/ux3/Shell.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/EntityInfo.js",
+      "description" : "Provides reuse functionality for reading documentation from metamodel entities",
+      "size" : 8173,
+      "compressedSize" : 4261,
+      "required" : ["jquery.sap.global.js", "sap/ui/demokit/util/jsanalyzer/ModuleAnalyzer.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/FileUploadIntrospector.js",
+      "description" : "Provides control sap.ui.demokit.FileUploadIntrospector.",
+      "size" : 3389,
+      "compressedSize" : 1444,
+      "required" : ["jquery.sap.global.js", "sap/ui/core/Control.js", "sap/ui/demokit/library.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/FileUploadIntrospectorRenderer.js",
+      "description" : "Provides default renderer for control sap.ui.demokit.FileUploadIntrospector",
+      "size" : 2992,
+      "compressedSize" : 1686,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/HexagonButton.js",
+      "description" : "Provides control sap.ui.demokit.HexagonButton.",
+      "size" : 2833,
+      "compressedSize" : 1128,
+      "required" : ["jquery.sap.global.js", "sap/ui/core/Control.js", "sap/ui/demokit/library.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/HexagonButtonGroup.js",
+      "description" : "Provides control sap.ui.demokit.HexagonButtonGroup.",
+      "size" : 1490,
+      "compressedSize" : 563,
+      "required" : ["jquery.sap.global.js", "sap/ui/core/Control.js", "sap/ui/demokit/library.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/HexagonButtonGroupRenderer.js",
+      "description" : "Provides default renderer for control sap.ui.demokit.HexagonButtonGroup",
+      "size" : 1621,
+      "compressedSize" : 564,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/HexagonButtonRenderer.js",
+      "description" : "Provides default renderer for control sap.ui.demokit.HexagonButton",
+      "size" : 1800,
+      "compressedSize" : 823,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/IndexLayout.js",
+      "description" : "Provides control sap.ui.demokit.IndexLayout.",
+      "size" : 9911,
+      "compressedSize" : 5455,
+      "required" : ["jquery.sap.global.js", "sap/ui/Device.js", "sap/ui/core/Control.js", "sap/ui/core/IntervalTrigger.js", "sap/ui/demokit/library.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/IndexLayoutPage.js",
+      "description" : "Creates Index Page within the Demokit",
+      "size" : 3782,
+      "compressedSize" : 2390,
+      "required" : ["jquery.sap.global.js", "sap/ui/core/IconPool.js", "sap/ui/demokit/IndexLayout.js", "sap/ui/model/json/JSONModel.js", "jquery.sap.encoder.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/IndexLayoutRenderer.js",
+      "description" : "Provides default renderer for control sap.ui.demokit.IndexLayout",
+      "size" : 1318,
+      "compressedSize" : 622,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/IndexPage.js",
+      "description" : "Provides a pseudo control for index pages within the Demokit",
+      "size" : 2769,
+      "compressedSize" : 1757,
+      "required" : ["jquery.sap.global.js", "sap/ui/demokit/DemokitApp.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/Tag.js",
+      "description" : "Provides control sap.ui.demokit.Tag.",
+      "size" : 1433,
+      "compressedSize" : 570,
+      "required" : ["jquery.sap.global.js", "sap/ui/core/Element.js", "sap/ui/demokit/library.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/TagCloud.js",
+      "description" : "Provides control sap.ui.demokit.TagCloud.",
+      "size" : 2008,
+      "compressedSize" : 749,
+      "required" : ["jquery.sap.global.js", "sap/ui/core/Control.js", "sap/ui/demokit/library.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/TagCloudRenderer.js",
+      "description" : "Provides default renderer for control sap.ui.demokit.TagCloud",
+      "size" : 2189,
+      "compressedSize" : 974,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/UI5EntityCueCard.js",
+      "description" : "Provides control sap.ui.demokit.UI5EntityCueCard.",
+      "size" : 7446,
+      "compressedSize" : 3075,
+      "required" : ["jquery.sap.global.js", "sap/ui/commons/Link.js", "sap/ui/core/Control.js", "sap/ui/demokit/EntityInfo.js", "sap/ui/demokit/library.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/UI5EntityCueCardRenderer.js",
+      "description" : "Provides default renderer for control sap.ui.demokit.UI5EntityCueCard",
+      "size" : 7678,
+      "compressedSize" : 4637,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/UIAreaSubstitute.js",
+      "description" : "Provides control sap.ui.demokit.UIAreaSubstitute.",
+      "size" : 1390,
+      "compressedSize" : 544,
+      "required" : ["jquery.sap.global.js", "sap/ui/core/Element.js", "sap/ui/demokit/library.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/explored/Bootstrap.js",
+      "description" : "Bootstrap for the 'explored' app.",
+      "size" : 7523,
+      "compressedSize" : 4483,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/explored/Component.js",
+      "description" : "Root component for the 'explored' app.",
+      "size" : 4275,
+      "compressedSize" : 2735,
+      "required" : ["jquery.sap.global.js", "sap/ui/demokit/explored/util/MyRouter.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/explored/i18n/messageBundle.properties",
+      "size" : 574,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/explored/util/MyRouter.js",
+      "description" : "Provides acustomized router class for the 'explored' app.",
+      "size" : 1050,
+      "compressedSize" : 516,
+      "required" : ["jquery.sap.global.js", "sap/ui/core/routing/Router.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/explored/util/ObjectSearch.js",
+      "description" : "Provides a simple search feature",
+      "size" : 497,
+      "compressedSize" : 272,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/explored/util/ToggleFullScreenHandler.js",
+      "description" : "Provides a simple search feature",
+      "size" : 1477,
+      "compressedSize" : 988,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/explored/view/app.controller.js",
+      "size" : 1087,
+      "compressedSize" : 858,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/explored/view/app.view.js",
+      "size" : 458,
+      "compressedSize" : 294,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/explored/view/appSettingsDialog.fragment.xml",
+      "size" : 1253,
+      "required" : ["sap/ui/core/Fragment.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/explored/view/code.controller.js",
+      "size" : 5307,
+      "compressedSize" : 3269,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/explored/view/code.view.xml",
+      "size" : 926,
+      "required" : ["sap/ui/core/mvc/XMLView.js", "sap/ui/demokit/explored/view/code.controller.js", "sap/ui/core/HTML.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/explored/view/entity.controller.js",
+      "size" : 15412,
+      "compressedSize" : 9211,
+      "required" : ["sap/ui/demokit/EntityInfo.js", "jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/explored/view/entity.view.xml",
+      "size" : 11165,
+      "required" : ["sap/ui/core/mvc/XMLView.js", "sap/ui/demokit/explored/view/entity.controller.js", "sap/ui/core/CustomData.js", "sap/ui/layout/VerticalLayout.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/explored/view/master.controller.js",
+      "size" : 13371,
+      "compressedSize" : 7691,
+      "required" : ["jquery.sap.storage.js", "jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/explored/view/master.view.xml",
+      "size" : 1392,
+      "required" : ["sap/ui/core/mvc/XMLView.js", "sap/ui/demokit/explored/view/master.controller.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/explored/view/notFound.controller.js",
+      "size" : 918,
+      "compressedSize" : 778,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/explored/view/notFound.view.xml",
+      "size" : 425,
+      "required" : ["sap/ui/core/mvc/XMLView.js", "sap/ui/demokit/explored/view/notFound.controller.js", "sap/ui/core/HTML.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/explored/view/sample.controller.js",
+      "size" : 3836,
+      "compressedSize" : 2490,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/explored/view/sample.view.xml",
+      "size" : 648,
+      "required" : ["sap/ui/core/mvc/XMLView.js", "sap/ui/demokit/explored/view/sample.controller.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/explored/view/titles.view.html",
+      "size" : 1941,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/explored/view/viewSettingsDialog.fragment.xml",
+      "size" : 2250,
+      "required" : ["sap/ui/core/Fragment.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/explored/view/welcome.view.xml",
+      "size" : 303,
+      "required" : ["sap/ui/core/mvc/XMLView.js", "sap/ui/core/mvc/HTMLView.js", "sap/ui/demokit/explored/view/titles.view.html"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/icex/Component.js",
+      "description" : "! @copyright@",
+      "size" : 2711,
+      "compressedSize" : 1579,
+      "required" : ["sap/ui/core/UIComponent.js", "sap/ui/demokit/icex/model/FavoriteModel.js", "sap/ui/demokit/icex/util/Sorter.js", "jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/icex/model/Config.js",
+      "description" : "! @copyright@",
+      "size" : 396,
+      "compressedSize" : 218,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/icex/model/FavoriteModel.js",
+      "description" : "! @copyright@",
+      "size" : 1742,
+      "compressedSize" : 1055,
+      "required" : ["jquery.sap.storage.js", "sap/ui/demokit/icex/util/Sorter.js", "jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/icex/util/Sorter.js",
+      "description" : "! @copyright@",
+      "size" : 420,
+      "compressedSize" : 296,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/icex/view/App.controller.js",
+      "size" : 3624,
+      "compressedSize" : 2225,
+      "required" : ["jquery.sap.history.js", "sap/m/InstanceManager.js", "jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/icex/view/App.view.js",
+      "size" : 944,
+      "compressedSize" : 723,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/icex/view/Detail.controller.js",
+      "size" : 1864,
+      "compressedSize" : 1284,
+      "required" : ["sap/ui/core/IconPool.js", "jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/icex/view/Detail.view.xml",
+      "size" : 3503,
+      "required" : ["sap/ui/core/mvc/XMLView.js", "sap/ui/demokit/icex/view/Detail.controller.js", "sap/ui/core/Icon.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/icex/view/Favorite.controller.js",
+      "size" : 1976,
+      "compressedSize" : 1332,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/icex/view/Favorite.view.xml",
+      "size" : 1234,
+      "required" : ["sap/ui/core/mvc/XMLView.js", "sap/ui/demokit/icex/view/Favorite.controller.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/icex/view/Group.controller.js",
+      "size" : 1656,
+      "compressedSize" : 1219,
+      "required" : ["sap/ui/demokit/icex/model/Config.js", "jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/icex/view/Group.view.xml",
+      "size" : 983,
+      "required" : ["sap/ui/core/mvc/XMLView.js", "sap/ui/demokit/icex/view/Group.controller.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/icex/view/Master.controller.js",
+      "size" : 2099,
+      "compressedSize" : 1437,
+      "required" : ["sap/ui/demokit/icex/model/Config.js", "jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/icex/view/Master.view.xml",
+      "size" : 1713,
+      "required" : ["sap/ui/core/mvc/XMLView.js", "sap/ui/demokit/icex/view/Master.controller.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/icex/view/Welcome.view.xml",
+      "size" : 2010,
+      "required" : ["sap/ui/core/mvc/XMLView.js", "sap/ui/core/Icon.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/library.js",
+      "description" : "Initialization Code and shared classes of library sap.ui.demokit.",
+      "size" : 7865,
+      "compressedSize" : 3917,
+      "required" : ["jquery.sap.global.js", "sap/ui/demokit/js/highlight-query-terms.js", "sap/ui/core/library.js", "sap/ui/commons/library.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/util/jsanalyzer/ASTUtils.js",
+      "description" : "Provides implementation of sap.ui.demokit.util.jsanalyzer.ASTUtils",
+      "size" : 5853,
+      "compressedSize" : 2566,
+      "required" : ["jquery.sap.global.js", "sap/ui/demokit/js/esprima.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/util/jsanalyzer/Doclet.js",
+      "description" : "Provides implementation of sap.ui.demokit.util.jsanalyzer.Doclet",
+      "size" : 2547,
+      "compressedSize" : 1239,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "sap/ui/demokit/util/jsanalyzer/ModuleAnalyzer.js",
+      "description" : "Provides implementation of sap.ui.demokit.util.jsanalyzer.EntityParser",
+      "size" : 15977,
+      "compressedSize" : 7825,
+      "required" : ["jquery.sap.global.js", "sap/ui/base/ManagedObjectMetadata.js", "sap/ui/demokit/util/jsanalyzer/ASTUtils.js", "sap/ui/demokit/util/jsanalyzer/Doclet.js", "sap/ui/demokit/js/esprima.js"],
+      "includes" : []
+    }
+  ]
+}

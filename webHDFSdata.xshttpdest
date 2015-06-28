@@ -1,0 +1,9 @@
+host = "zzz.zzz.zzz.zzz";
+port = 50013;
+description = "HADOOP HDFS Data Node 50013 -> 50075";
+useSSL = false;
+authType = none;
+useProxy = true;
+proxyHost = "proxy-trial";
+proxyPort = 8080;
+timeout = 0;
